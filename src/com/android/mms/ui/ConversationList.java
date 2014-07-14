@@ -223,6 +223,9 @@ public class ConversationList extends ListActivity implements DraftCache.OnDraft
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);     
         
+        overridePendingTransition(R.anim.activity_open_enter,
+					R.anim.activity_open_exit);
+        
         setContentView(R.layout.conversation_list_screen);
 
 	ImageView view = (ImageView)findViewById(android.R.id.home);
@@ -285,9 +288,9 @@ public class ConversationList extends ListActivity implements DraftCache.OnDraft
         
 	LayoutInflater inflater2 = getLayoutInflater();
 
-	final ViewGroup header2 = (ViewGroup) inflater2.inflate(R.layout.header2,
-				listView, false);
-        listView.addHeaderView(header2, null, false);
+//	final ViewGroup header2 = (ViewGroup) inflater2.inflate(R.layout.header2,
+//				listView, false);
+//      listView.addHeaderView(header2, null, false);
 		       
         listView.setMultiChoiceModeListener(new ModeCallback());
 
@@ -799,15 +802,21 @@ public class ConversationList extends ListActivity implements DraftCache.OnDraft
 
 		case 0:
 			// Header
+			overridePendingTransition(R.anim.activity_open_enter,
+					R.anim.activity_open_exit);
 			break;
 			
 		case 1:
+		overridePendingTransition(R.anim.activity_open_enter,
+					R.anim.activity_open_exit);
 			onResume();
 			break;	
 
 		case 2:
 			if (mIsSmsEnabled) {
 				createNewMessage();
+				overridePendingTransition(R.anim.activity_open_enter,
+					R.anim.activity_open_exit);
 			} else {
 				// Display a toast letting the user know they can not compose.
 				if (mComposeDisabledToast == null) {
@@ -827,6 +836,8 @@ public class ConversationList extends ListActivity implements DraftCache.OnDraft
 				contacts.addCategory("android.intent.category.LAUNCHER");
 				contacts.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 				startActivity(contacts);
+				overridePendingTransition(R.anim.activity_open_enter,
+					R.anim.activity_open_exit);
 			break;	
 			
 		case 4:
@@ -837,13 +848,17 @@ public class ConversationList extends ListActivity implements DraftCache.OnDraft
 				hangouts.addCategory("android.intent.category.LAUNCHER");
 				hangouts.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 				startActivity(hangouts);
+				overridePendingTransition(R.anim.activity_open_enter,
+					R.anim.activity_open_exit);
 				break;	
 				
 		case 5:
                     // Launch settings
                     Intent settingsIntent = new Intent(ConversationList.this,
                             MessagingPreferenceActivity.class);
-                    startActivity(settingsIntent);		
+                    startActivity(settingsIntent);	
+                    overridePendingTransition(R.anim.activity_open_enter,
+					R.anim.activity_open_exit);	
 				break;				
 
 		}

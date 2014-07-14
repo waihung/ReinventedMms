@@ -19,8 +19,8 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="com.android.mms"
-        android:versionCode="4"
-        android:versionName="L.001a" >
+        android:versionCode="5"
+        android:versionName="L.002" >
         
     <uses-sdk
         android:minSdkVersion="16"
@@ -56,7 +56,7 @@
     <uses-permission android:name="android.permission.MMS_SEND_OUTBOX_MSG"/>
     <application android:name="MmsApp"
             android:label="@string/app_label"
-            android:icon="@drawable/rmms"
+            android:icon="@drawable/ic_launcher"
             android:taskAffinity="android.task.mms"
             android:theme="@style/MmsHoloTheme"
             android:hardwareAccelerated="true"

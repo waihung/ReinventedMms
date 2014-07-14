@@ -40,7 +40,7 @@
             android:layout_width="32dip"
             android:layout_height="32dip"
             android:layout_marginRight="8dip"
-            android:src="@drawable/rmms" />
+            android:src="@drawable/ic_launcher" />
         <TextView
             android:id="@+id/widget_label"
             style="@style/WidgetTitle"
