@@ -72,17 +72,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:src="@drawable/nomessages"
-        android:textColor="#FF242424"
-        android:text="@string/loading_conversations"
+        android:textColor="#00000000"
+        android:text="@string/blanktext"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <ListView
         android:id="@+id/left_drawer"
-        android:layout_width="275.00dp"
+        android:layout_width="300.00dp"
         android:layout_height="fill_parent"
         android:layout_gravity="start"
-        android:background="#FFf7f7f7"
+        android:background="#FFf9f9f9"
         android:choiceMode="singleChoice"
         android:divider="#59d5d5d5"
         android:dividerHeight="1.00dp"

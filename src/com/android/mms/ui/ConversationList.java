@@ -229,7 +229,7 @@ public class ConversationList extends ListActivity implements DraftCache.OnDraft
         setContentView(R.layout.conversation_list_screen);
 
 	ImageView view = (ImageView)findViewById(android.R.id.home);
-        view.setPadding(35, 5, 0, 5); 
+        view.setPadding(50, 0, 0, 0); 
     
 
 		mTitle = mDrawerTitle = getTitle();
@@ -630,6 +630,8 @@ public class ConversationList extends ListActivity implements DraftCache.OnDraft
 
     private void startAsyncQuery() {
         try {
+        
+//      ((TextView)(getListView().getEmptyView())).setText(R.string.blanktext);
 
             Conversation.startQueryForAll(mQueryHandler, THREAD_LIST_QUERY_TOKEN);
             Conversation.startQuery(mQueryHandler, UNREAD_THREADS_QUERY_TOKEN, Threads.READ + "=0");
@@ -1133,6 +1135,9 @@ public class ConversationList extends ListActivity implements DraftCache.OnDraft
                 mListAdapter.changeCursor(cursor);
 
                 if (mListAdapter.getCount() == 0) {
+                
+//              ((TextView)(getListView().getEmptyView())).setText(R.string.blanktext);
+                
                 }
 
                 if (mDoOnceAfterFirstQuery) {

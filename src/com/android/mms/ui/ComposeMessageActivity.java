@@ -2655,7 +2655,7 @@ public class ComposeMessageActivity extends Activity
                 .setTitle(R.string.menu_call);
             if (!isRecipientsEditorVisible()) {
                 // If we're not composing a new message, show the call icon in the actionbar
-                item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+                item.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
             }
         }
 
@@ -2666,7 +2666,7 @@ public class ComposeMessageActivity extends Activity
                 menu.add(0, MENU_ADD_ATTACHMENT, 0, R.string.add_attachment)
                         .setIcon(R.drawable.ic_action_storage)
                     .setTitle(R.string.add_attachment)
-                        .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);    // add to actionbar
+                        .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);    // add to actionbar
             }
         }
 
@@ -2690,12 +2690,12 @@ public class ComposeMessageActivity extends Activity
             Cursor cursor = mMsgListAdapter.getCursor();
             if ((null != cursor) && (cursor.getCount() > 0)) {
                 menu.add(0, MENU_DELETE_THREAD, 0, R.string.delete_thread).setIcon(
-                    R.drawable.trash)
-                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+                    R.drawable.invisible)
+                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
             }
         } else if (mIsSmsEnabled) {
-            menu.add(0, MENU_DISCARD, 0, R.string.discard).setIcon(R.drawable.trash)
-            .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+            menu.add(0, MENU_DISCARD, 0, R.string.discard).setIcon(R.drawable.invisible)
+            .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
         }
 
         buildAddAddressToContactMenuItem(menu);

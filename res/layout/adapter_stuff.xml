@@ -31,14 +31,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_toRightOf="@android:id/icon"
-        android:textSize="18.0sp"
-        android:fontFamily="sans-serif-light"
+        android:textSize="16.0sp"
+        android:fontFamily="sans-serif-thin"
         android:textStyle="bold"
         android:ellipsize="marquee"
         android:singleLine="true"
         android:minHeight="64.0dip"
         android:gravity="center_vertical"
-            android:textColor="#ff242424" />
+        android:textColor="#ff242424" />
     </LinearLayout>
 
 </LinearLayout>
