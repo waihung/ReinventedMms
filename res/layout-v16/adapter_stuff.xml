@@ -32,6 +32,8 @@
         android:layout_height="match_parent"
         android:layout_toRightOf="@android:id/icon"
         android:textSize="16.0sp"
+        android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"
         android:ellipsize="marquee"
         android:singleLine="true"
         android:minHeight="64.0dip"

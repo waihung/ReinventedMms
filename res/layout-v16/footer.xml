@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="#f7f7f7"
+    tools:ignore="ObsoleteLayoutParam" >
+
+    <View
+        android:id="@+id/google_nav_drawer_divider_top"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:gravity="top"
+        android:layout_gravity="top"
+        android:background="#ffe5e5e5" />
+
+    <Button
+        android:id="@+id/b3"
+        style="@style/GoogleNavDrawer.SecondarySectionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@android:id/icon"
+        android:cacheColorHint="#26000000"
+        android:background="#f7f7f7" 
+        android:paddingLeft="40dp"
+        android:textSize="13.0sp"
+        android:text="@string/settings"
+        android:textColor="#242424" >
+    </Button>
+
+    <View
+        android:id="@+id/google_nav_drawer_divider_bottom3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/b3"
+        android:background="#ffe5e5e5" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:paddingLeft="1dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_action_settings"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>
+</RelativeLayout>
