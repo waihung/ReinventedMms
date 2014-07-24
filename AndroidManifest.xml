@@ -23,7 +23,7 @@
         android:versionName="L.0300" >
         
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="14"
         android:targetSdkVersion="19"
         android:maxSdkVersion="19" />        
 
